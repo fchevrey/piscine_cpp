@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/10 16:34:46 by fchevrey          #+#    #+#             */
-/*   Updated: 2018/06/10 16:50:28 by fchevrey         ###   ########.fr       */
+/*   Updated: 2018/06/10 17:20:49 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,21 @@ class Player
 	Player(char *na, char *ra, char *cla, int l);
 	~Player(void);
 	void	lvlup(void);
+	char	*getname(void) const ;
+	char	*getrace(void) const ;
+	char	*getclas(void) const ;
+	int		getlvl(void) const;
+	void	setname(char *);
+	void	setrace(char *);
+	void	setclas(char *);
+	void	setlvl(int);
 
 	private:
 
-	char	*name;
-	char	*race;
-	char	*clas;
-	int		lvl;
+	char	*_name;
+	char	*_race;
+	char	*_clas;
+	int		_lvl;
 };
 
 #endif

@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/10 17:06:21 by fchevrey          #+#    #+#             */
-/*   Updated: 2018/06/10 17:40:56 by fchevrey         ###   ########.fr       */
+/*   Created: 2018/06/10 18:20:01 by fchevrey          #+#    #+#             */
+/*   Updated: 2018/06/10 18:52:30 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Player.class.hpp"
 #include <iostream>
 
-int		main(void)
+char	*strupper(char *src)
 {
-	char		name[] = "fab";
-	char		race[] = "human";
-	char		clas[] = "mage";
-	Player		me(name, race, clas, 1);
+	int		i;
 
-	std::cout << "name = " << me.getname() << " race = " << me.getrace() << std::endl;
-	std::cout << "clas = " << me.getclas() << " lvl = " << me.getlvl() << std::endl;
-	me.lvlup();
-	std::cout << "lvl = " << me.getlvl() << std::endl;
+	i = -1;
+	while (src[++i])
+		if (src[i] >= 'a' && src[i] <= 'z')
+			src[i] -= 32;
+	return (src);
+}
+
+int		main(int ac, char **av)
+{
+	int		i;
+
+	if (ac < 2)
+	{
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+		return (1);
+	}
+	i = 0;
+	while (++i < ac)
+		std::cout << strupper(av[i]);
+	std::cout << std::endl;
 	return (1);
 }
