@@ -14,6 +14,17 @@
 #include "Agenda.class.hpp"
 #include <iostream>
 
+void	AdvanceSearch(Agenda *agenda)
+{
+	std::string 	input;
+	int		index;
+	
+	std::cout << "tap index to display more informations" << std::endl;
+	std::cin >> input;
+	index = std::atoi(input);
+
+}
+
 bool CheckResult(std::string *input, Agenda *agenda) 
 {
 	if (!input->compare("ADD"))
@@ -26,6 +37,11 @@ bool CheckResult(std::string *input, Agenda *agenda)
 	else if (!input->compare("SEARCH"))
 	{
 		agenda->Display();
+		if ( agenda->GetLength() > 0)
+		{
+			AdvanceSearch(agenda);
+		}
+		
 	}
 	else if (!input->compare("EXIT"))
 	{
@@ -40,14 +56,12 @@ bool CheckResult(std::string *input, Agenda *agenda)
 
 int		main(void)
 {
-	//Contact		book[8];
 	Agenda			agenda;
 	std::string		input;
 	bool			finish = false;
 
 
 	std::cout << "PhoneBook is actualy empty, please add a contact" << std::endl;
-	//std::cout << "command disponible are ADD, SEARCH and EXIT" << std::endl;
 	while (!finish)
 	{
 		std::cout << "command disponible are ADD, SEARCH and EXIT" << std::endl;
