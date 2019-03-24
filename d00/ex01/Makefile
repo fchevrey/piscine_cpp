@@ -22,7 +22,7 @@ HEADERS = $(addprefix $(HEADER_DIR), $(HEADER))
 
 CC = g++
 
-CFLAGS = -Wall -Werror -Wextra $(INCLUDE)
+CFLAGS = -Wall -Werror -Wextra
 
 SRC_O = $(SRC_C:.cpp=.o)
 
@@ -31,11 +31,13 @@ INCLUDE = -I includes/
 all: $(HEADERS) $(NAME)
 
 %.o:%.cpp
-	$(CC) -c -o $@ $< $(CFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS) $(INCLUDE)
+
+TEST: $(HEADER) $(SRC_O)
+	$(CC) -o $(NAME) $(INCLUDE) $(SRC_O)
 
 $(NAME): $(SRC_O)
-	$(CC) -o $(NAME) $(CFLAGS) $(SRC_O)
-
+	$(CC) -o $(NAME) $(INCLUDE) $(CFLAGS) $(SRC_O) 
 clean:
 	rm -f $(SRC_O)
 

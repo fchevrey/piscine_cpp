@@ -15,15 +15,19 @@
 # include <string>
 # include <ctime>
 # include <iomanip>
+# include <iostream>
 
 class	Contact
 {
 	public :
 
 	Contact(void);
+	Contact(int i);
 	~Contact(void);
 	bool			fill(void);
 	std::string		ToString();
+	std::string GetFirstName(void);
+	std::string GetLastName(void);
 	bool SetFirstName(std::string value);
 	bool SetLastName(std::string value);
 	bool SetNickname(std::string value);

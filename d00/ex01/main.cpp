@@ -11,28 +11,37 @@
 /* ************************************************************************** */
 
 #include "Contact.class.hpp"
+#include "Agenda.class.hpp"
 #include <iostream>
 
-bool CheckResult(std::string *input) 
+bool CheckResult(std::string *input, Agenda *agenda) 
 {
-	if (input->compare("ADD"))
+	if (!input->compare("ADD"))
 	{
-
+		if (!agenda->Add())
+		{
+			std::cout << "Phonebook full" << std::endl;
+		}
 	}
-	else if (input->compare("SEARCH"))
+	else if (!input->compare("SEARCH"))
 	{
-
+		agenda->Display();
 	}
-	else if (input->compare("EXIT"))
+	else if (!input->compare("EXIT"))
 	{
 		return true;
+	}
+	else
+	{
+		std::cout << "invalid command"<< std::endl;
 	}
 	return false;
 }
 
 int		main(void)
 {
-	Contact		book[8];
+	//Contact		book[8];
+	Agenda			agenda;
 	std::string		input;
 	bool			finish = false;
 
@@ -44,7 +53,8 @@ int		main(void)
 		std::cout << "command disponible are ADD, SEARCH and EXIT" << std::endl;
 		std::cin >> input;
 		//getline(cin, input);
-		finish = CheckResult(&input);
+		//finish = CheckResult(&input);
+		finish = CheckResult(&input, &agenda);
 	}
 	return (0);
 }
