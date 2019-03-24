@@ -33,10 +33,10 @@ Contact::Contact(int i)
 	SetLogin(input);
 	std::cout << "enter the postal adress :" << std::endl;
 	std::cin >> input;
-	SetPostalAdress(input);
+	SetPostalAddress(input);
 	std::cout << "enter the email adress :" << std::endl;
 	std::cin >> input;
-	SetEmailAdress(input);
+	SetEmailAddress(input);
 	std::cout << "enter the phone number :" << std::endl;
 	std::cin >> input;
 	SetPhoneNumber(input);
@@ -76,14 +76,14 @@ bool Contact::SetLogin(std::string value)
 	this->_login = value;
 	return true;
 }
-bool Contact::SetPostalAdress(std::string value)
+bool Contact::SetPostalAddress(std::string value)
 {
 	this->_postal_address = value;
 	return true;
 }
-bool Contact::SetEmailAdress(std::string value)
+bool Contact::SetEmailAddress(std::string value)
 {
-	this->_email_adress = value;
+	this->_email_address = value;
 	return true;
 }
 bool Contact::SetPhoneNumber(std::string value)
@@ -108,7 +108,7 @@ bool Contact::SetUnderwearColor(std::string value)
 }
 bool Contact::SetDarkestSecret(std::string value)
 {
-	this->_darkest_secrey = value;
+	this->_darkest_secret = value;
 	return true;
 }
 
@@ -119,4 +119,40 @@ std::string	Contact::GetFirstName(void)
 std::string	Contact::GetLastName(void)
 {
 	return (this->_last_name);
+}
+std::string	Contact::GetNickname(void)
+{
+	return (this->_nickname);
+}
+std::string	Contact::GetLogin(void)
+{
+	return (this->_login);
+}
+std::string	Contact::GetPostalAddress(void)
+{
+	return (this->_postal_address);
+}
+std::string	Contact::GetEmailAddress(void)
+{
+	return (this->_email_address);
+}
+std::string	Contact::GetPhoneNumber(void)
+{
+	return (this->_phone_number);
+}
+std::string	Contact::GetBirthdayDate(void)
+{
+	return (this->_birthday_date);
+}
+std::string	Contact::GetFavoriteMeal(void)
+{
+	return (this->_favorite_meal);
+}
+std::string	Contact::GetUnderwearColor(void)
+{
+	return (this->_underwear_color);
+}
+std::string	Contact::GetDarkestSecret(void)
+{
+	return (this->_darkest_secret);
 }
