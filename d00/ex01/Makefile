@@ -10,22 +10,28 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 
-SRC_C = megaphone.cpp
+HEADER_DIR = includes/
+
+SRC_C = Contact.class.cpp Agenda.class.cpp main.cpp
+
+HEADER = Contact.class.hpp Agenda.class.hpp
+
+HEADERS = $(addprefix $(HEADER_DIR), $(HEADER))
 
 CC = g++
 
-CFLAGS = -Wall -Werror -Wextra #$(INCLUDE)
+CFLAGS = -Wall -Werror -Wextra $(INCLUDE)
 
 SRC_O = $(SRC_C:.cpp=.o)
 
-#INCLUDE = -I includes/
+INCLUDE = -I includes/
 
-all: $(NAME)
+all: $(HEADERS) $(NAME)
 
 %.o:%.cpp
-	$(CC) -o $@ $(CFLAGS) -c $<
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 $(NAME): $(SRC_O)
 	$(CC) -o $(NAME) $(CFLAGS) $(SRC_O)
