@@ -11,7 +11,8 @@ std::string		Human::identify(void)
 	return (this->_brain.identify());
 }
 
-Brain			Human::getBrain()
+Brain &			Human::getBrain()
 {
-	return (this->_brain);
+	Brain & brain = this->_brain;
+	return (brain);
 }
