@@ -6,12 +6,13 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:40 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 18:21:48 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 18:42:40 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
+# include <string>
 
 class Zombie
 {

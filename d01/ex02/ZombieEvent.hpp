@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:37 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 18:21:46 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 18:50:41 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class ZombieEvent
 		void	randomChump(void);
 
 	private :
+		std::string _next_type;
+		std::string *_rd_names;
 };
 
 #endif

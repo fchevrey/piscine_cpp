@@ -6,28 +6,25 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:43 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 18:21:45 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 18:56:49 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-# include <string>
+#include "Zombie.hpp"
+#include <string>
+#include <iostream>
 
-class Zombie
+Zombie::Zombie(void)
 {
-	public :
-		Zombie(void);
-		Zombie(std::string name);
-		~Zombie(void);
+	this->name = "none";
+	this->type = "none";
+}
 
-		void	setZombieType(std::string type);
-		void	Announce(void);
+Zombie::~Zombie(void)
+{
+}
 
-
-	private :
-		std::string _type;
-		std::string _name;
-};
-
-#endif
+void	Zombie::Announce(void)
+{
+	std::cout << "<" << this->name << " (" << this->type << ") > Braiiiiiins" << std::endl;
+}
