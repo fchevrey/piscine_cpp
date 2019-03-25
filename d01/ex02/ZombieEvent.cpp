@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:33 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 20:09:56 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 20:23:50 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ZombieEvent::ZombieEvent(void)
 	this->_next_type = "none";
 	for (int i = 0; i < 10; i++)
 		this->_rd_names[i] = init[i];
+	std::srand(time(0));
 }
 
 ZombieEvent::~ZombieEvent(void)
@@ -46,5 +47,5 @@ void		ZombieEvent::randomChump(void)
 
 	chump.name = this->_rd_names[std::rand() % 10];
 	chump.type = this->_next_type;
-	chump.Announce();
+	chump.announce();
 }

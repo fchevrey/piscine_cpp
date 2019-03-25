@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 20:08:16 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 20:12:13 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 20:24:02 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ int		main(void)
 	event.setZombieType("Hungry");
 	event.randomChump();
 	Zombie *z = event.newZombie("Patato");
-	z->Announce();
+	z->announce();
 	event.setZombieType("Climbing");
 	Zombie *zz = event.newZombie("Norbert");
-	zz->Announce();
+	zz->announce();
+	event.randomChump();
 	delete(z);
 	delete(zz);
 	return 0;

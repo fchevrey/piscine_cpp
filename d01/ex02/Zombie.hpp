@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:40 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 18:42:40 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 20:23:38 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Zombie
 		Zombie(void);
 		~Zombie(void);
 
-		void	Announce(void);
+		void	announce(void);
 		std::string type;
 		std::string name;
 };

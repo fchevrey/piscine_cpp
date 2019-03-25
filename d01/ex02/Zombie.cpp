@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:43 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 18:56:49 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 20:23:28 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Zombie::~Zombie(void)
 {
 }
 
-void	Zombie::Announce(void)
+void	Zombie::announce(void)
 {
-	std::cout << "<" << this->name << " (" << this->type << ") > Braiiiiiins" << std::endl;
+	std::cout << "<" << this->name << " (" << this->type << ")> Braiiiiiins" << std::endl;
 }
