@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/25 18:21:33 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/25 18:53:31 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 20:09:56 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 
 ZombieEvent::ZombieEvent(void)
 {
+	std::string		init[] = {"William", "Suzie", "Robert", "Nina", "Alan",
+		"Judie", "Billy", "Carla", "Jimmy", "Rachel"};
 	this->_next_type = "none";
-	this->_rd_names = new std::string[10] {"William", "Suzie", "Robert", "Nina", "Alan", "Judie",
-		"Billy", "Carla", "Jimmy", "Rachel"};
+	for (int i = 0; i < 10; i++)
+		this->_rd_names[i] = init[i];
 }
 
 ZombieEvent::~ZombieEvent(void)
 {
-	delete (this->_rd_names);
 }
 
 void		ZombieEvent::setZombieType(std::string type)
@@ -30,7 +31,7 @@ void		ZombieEvent::setZombieType(std::string type)
 	this->_next_type = type;
 }
 
-Zombie		*ZombieEvent::NewZombie(std::string name)
+Zombie		*ZombieEvent::newZombie(std::string name)
 {
 	Zombie		*z = new Zombie();
 	
