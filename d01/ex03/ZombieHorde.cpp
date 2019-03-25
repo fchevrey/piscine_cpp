@@ -15,7 +15,7 @@ ZombieHorde::ZombieHorde(int N)
 	for (int i = 0; i < 10; i++)
 		this->_rd_names[i] = init[i];
 	this->_size = N;
-	this->_horde = new Zombie[N]();
+	this->_horde = new Zombie[N];
 	for (int i = 0; i < this->_size; i++)
 	{
 		this->_horde[i].name = _rd_names[std::rand() % 10];
