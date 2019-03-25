@@ -1,4 +1,4 @@
-tinclude "Contact.class.hpp"
+#include "Contact.class.hpp"
 class Agenda
 {
 public:
@@ -12,7 +12,7 @@ public:
 	int	GetLength(void);
 
 private :
-	int		_lenght;
+	int		_length;
 	int		_capacity;
 	Contact 	_contacts[8];
 };

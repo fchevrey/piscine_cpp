@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/10 19:28:46 by fchevrey          #+#    #+#             */
-/*   Updated: 2018/06/10 19:53:20 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/25 10:59:16 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	AdvanceSearch(Agenda *agenda)
 	
 	std::cout << "tap index to display more informations" << std::endl;
 	std::cin >> input;
-	index = std::atoi(input);
+	index = std::atoi(&input[0]);
+	agenda->Display(index - 1);
 
 }
 

@@ -4,7 +4,7 @@
 Agenda::Agenda()
 {
 	_capacity = 8;
-	_lenght = 0;
+	_length = 0;
 }
 
 Agenda::~Agenda()
@@ -18,7 +18,7 @@ int	Agenda::GetLength(void)
 
 bool Agenda::Add(void) 
 {
-	if (this->_lenght >= this->_capacity)
+	if (this->_length >= this->_capacity)
 	{
 		return false;
 	}
@@ -30,12 +30,12 @@ bool Agenda::Add(void)
 
 bool Agenda::Add(Contact toadd) 
 {
-	if (this->_lenght >= this->_capacity)
+	if (this->_length >= this->_capacity)
 	{
 		return false;
 	}
-	this->_lenght++;
-	this->_contacts[_lenght - 1] = toadd;
+	this->_length++;
+	this->_contacts[_length - 1] = toadd;
 	return true;
 }
 
@@ -61,11 +61,12 @@ static std::string	TenLetters(std::string src)
 	return (src);
 }
 
-bool Agenda::Display(int i) 
+void	 Agenda::Display(int i) 
 {
-	if (i > this->lenght)
+	if (i > this->_length || i < 0)
 	{
-		return (false);
+		std::cout << "invalid command" << std::endl;
+		return ;
 	}
 	std::cout << "First name : " << this->_contacts[i].GetFirstName() << std::endl;
 	std::cout << "Last name : " << this->_contacts[i].GetLastName() << std::endl;
@@ -75,10 +76,9 @@ bool Agenda::Display(int i)
 	std::cout << "Email address : " << this->_contacts[i].GetEmailAddress() << std::endl;
 	std::cout << "Phone number : " << this->_contacts[i].GetPhoneNumber() << std::endl;
 	std::cout << "Birthday date : " << this->_contacts[i].GetBirthdayDate() << std::endl;
-	std::cout << "Favorite meal " << this->_contacts[i].GeFavoriteMeal() << std::endl;
+	std::cout << "Favorite meal " << this->_contacts[i].GetFavoriteMeal() << std::endl;
 	std::cout << "Underwear color : " << this->_contacts[i].GetUnderwearColor() << std::endl;
 	std::cout << "Darkest secret : " << this->_contacts[i].GetDarkestSecret() << std::endl;
-	return (true);
 }
 
 void Agenda::Display() 
@@ -91,10 +91,10 @@ void Agenda::Display()
 	std::cout << "last name|";
 	std::cout.width(10);
 	std::cout << "nickname" << std::endl;
-	for (int i = 0; i < this->_lenght; i++) 
+	for (int i = 0; i < this->_length; i++) 
 	{
 		std::cout.width(10);
-		std::cout << i;
+		std::cout << (i + 1);
 		std::cout << std::right << "|" << TenLetters(this->_contacts[i].GetFirstName());
 		std::cout << std::right << "|" << TenLetters(this->_contacts[i].GetLastName());
 		std::cout << std::right << "|" << TenLetters(this->_contacts[i].GetNickname()) << std::endl;
