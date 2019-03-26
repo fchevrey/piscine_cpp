@@ -66,49 +66,55 @@ std::ostream &	operator<<(std::ostream &os, Fixed const & rhs)
 	return (os);
 }
 
-Fixed			Fixed::&operator=(Fixed const & rhs)
+bool			Fixed::operator<(Fixed const & rhs)
 {
+	return (this->_fixed < rhs.getRawBits());
 }
 
-Fixed			Fixed::&operator<(Fixed const & rhs)
+bool			Fixed::operator>(Fixed const & rhs)
 {
+	return (this->_fixed > rhs.getRawBits());
 }
 
-Fixed			Fixed::&operator>(Fixed const & rhs)
+bool			Fixed::operator>=(Fixed const & rhs)
 {
+	return (this->_fixed >= rhs.getRawBits());
 }
 
-Fixed			Fixed::&operator>=(Fixed const & rhs)
+bool			Fixed::operator<=(Fixed const & rhs)
 {
+	return (this->_fixed <= rhs.getRawBits());
 }
 
-Fixed			Fixed::&operator<=(Fixed const & rhs)
+bool			Fixed::operator==(Fixed const & rhs)
 {
+	return (this->_fixed == rhs.getRawBits());
 }
 
-Fixed			Fixed::&operator==(Fixed const & rhs)
+bool			Fixed::operator!=(Fixed const & rhs)
 {
-}
-
-Fixed			Fixed::&operator!=(Fixed const & rhs)
-{
+	return (this->_fixed != rhs.getRawBits());
 }
 
 
-Fixed			Fixed::&operator+(Fixed const & rhs)
+Fixed			Fixed::operator+(Fixed const & rhs)
 {
+	return (Fixed(this->toFloat() + rhs.toFloat()));
 }
 
-Fixed			Fixed::&operator-(Fixed const & rhs)
+Fixed			Fixed::operator-(Fixed const & rhs)
 {
+	return (Fixed(this->toFloat() - rhs.toFloat()));
 }
 
-Fixed			Fixed::&operator*(Fixed const & rhs)
+Fixed			Fixed::operator*(Fixed const & rhs)
 {
+	return (Fixed(this->toFloat() * rhs.toFloat()));
 }
 
-Fixed			Fixed::&operator/(Fixed const & rhs)
+Fixed			Fixed::operator/(Fixed const & rhs)
 {
+	return (Fixed(this->toFloat() / rhs.toFloat()));
 }
 
 Fixed			Fixed::&operator++()
