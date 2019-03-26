@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ex01.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/26 10:48:03 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 10:48:05 by fchevrey         ###   ########.fr       */
+/*   Created: 2019/03/26 17:05:45 by fchevrey          #+#    #+#             */
+/*   Updated: 2019/03/26 17:10:51 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Logger.hpp"
 
-void	memoryLeak()
+int main(void)
 {
-	std::string		*panthere = new std::string("String panthere");
+	Logger   logger("output.txt");
 
-	std::cout << *panthere << std::endl;
-	delete (panthere);
+	logger.log("console", "console - blabla");
+	logger.log("file", "in file - je suis dans un fichier");
+	return 0;
 }
