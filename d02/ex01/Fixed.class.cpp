@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.class.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/03/27 09:32:36 by fchevrey          #+#    #+#             */
+/*   Updated: 2019/03/27 10:49:59 by fchevrey         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.class.hpp"
 #include <iostream>
 #include <cmath>
@@ -34,7 +46,7 @@ Fixed::~Fixed(void)
 }
 float		Fixed::toFloat(void) const
 {
-	return (((float)this->_fixed) / (1 << this->_bits));//toFloat
+	return (((float)this->_fixed) / (1 << this->_bits));
 }
 
 int			Fixed::toInt(void) const

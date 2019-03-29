@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 10:48:52 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 10:48:54 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/27 16:00:22 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ int		main(void)
 	event.randomChump();
 	delete(z);
 	delete(zz);
+	while (1);
 	return 0;
 }

@@ -13,5 +13,7 @@ int main(void)
 
 	std::cout << b << std::endl;
 	std::cout << Fixed::max(a, b) << std::endl;
+	std::cout << a + b << std::endl;
+	std::cout << a * 2 << std::endl;
 	return 0;
 }

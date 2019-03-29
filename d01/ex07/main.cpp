@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 12:12:42 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 15:44:08 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/27 16:08:45 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		main(int argc, const char *argv[])
 	std::string		content;
 	std::string		dst;
 
-	if (argc < 4)
+	if (argc != 4)
 	{
 		std::cout << "usage : ./replace \"filname\" \"s1\" \"s2\"" << std::endl;
 		return (0);

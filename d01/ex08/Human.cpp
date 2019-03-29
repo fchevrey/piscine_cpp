@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 16:00:06 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 16:25:30 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/28 12:24:10 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void		Human::action(std::string const &action_name, std::string const & target)
 	while (i < 3)
 	{
 		if (!action_name.compare(str[i]))
-			(this->*f[i])(target);
+			(this->*(f[i]))(target);
 		i++;
 	}
 }

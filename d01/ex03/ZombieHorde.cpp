@@ -5,6 +5,7 @@ bool ZombieHorde::_rd = false;
 
 ZombieHorde::ZombieHorde(int N)
 {
+	this->_horde = nullptr;
 	if (N <= 0)
 		return ;
 	if (!_rd)
@@ -24,7 +25,8 @@ ZombieHorde::ZombieHorde(int N)
 }
 ZombieHorde::~ZombieHorde(void)
 {
-	delete [] (this->_horde);
+	if (this->_horde != nullptr)
+		delete [] (this->_horde);
 }
 void	ZombieHorde::announce(void)
 {

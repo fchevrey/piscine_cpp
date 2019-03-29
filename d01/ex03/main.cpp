@@ -5,13 +5,13 @@ void		create_horde(int N)
 {
 	ZombieHorde		horde(N);
 
-	horde.announce();
+	//horde.announce();
 }
 
 int main(void)
 {
-	create_horde(5);
+	create_horde(0);
 	std::cout << "---" << std::endl;
-	create_horde(3);
+	create_horde(-1);
 	return 0;
 }

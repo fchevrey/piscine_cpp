@@ -6,11 +6,11 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 10:46:20 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 10:46:21 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/27 15:52:32 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Poney.hpp"
+#include "Pony.hpp"
 #include <iostream>
 
 Poney::Poney(void)

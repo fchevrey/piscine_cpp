@@ -6,14 +6,14 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 10:46:41 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 10:46:44 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/27 15:52:13 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Poney.hpp"
+#include "Pony.hpp"
 #include <iostream>
 
-void	HeapPoney(void)
+void	ponyOnTheHeap(void)
 {
 	std::cout << "-- Heap Poney --" << std::endl;
 	Poney *p = new Poney(14, true, "vanilla", "Heapy", true);
@@ -28,7 +28,7 @@ void	HeapPoney(void)
 	delete p;
 }
 
-void	StackPoney(void)
+void	ponyOnTheStack(void)
 {
 	std::cout << "-- Stack Poney --" << std::endl;
 	Poney	p;
@@ -42,6 +42,6 @@ void	StackPoney(void)
 
 int		main(void)
 {
-	HeapPoney();
-	StackPoney();
+	ponyOnTheHeap();
+	ponyOnTheStack();
 }

@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/26 16:38:55 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/26 17:10:15 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/28 18:23:00 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,9 @@ void			Logger::logToConsole(std::string const &str)
 
 void			Logger::logToFile(std::string const &str)
 {
-	std::ofstream	ofs(_filename);
+	std::ofstream	ofs;
 
+	ofs.open(_filename, std::fstream::app);
 	if (!ofs || !ofs.is_open())
 		return ;
 	ofs << str << std::endl;
@@ -68,10 +69,10 @@ std::string		Logger::makeLogEntry(std::string const &src)
 	dst << "["  << year;
 	dst.width(2);
 	dst.fill('0');
-	dst << (time->tm_mon + 1);
+	dst << (time->tm_mon + 1);// 0 a 11
 	dst.width(2);
 	dst.fill('0');
-	dst << (time->tm_mday + 1);
+	dst << (time->tm_mday); //1 a 31
 	dst << "_";
 	dst.width(2);
 	dst.fill('0');
