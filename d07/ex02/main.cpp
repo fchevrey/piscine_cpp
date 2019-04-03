@@ -5,28 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/29 09:23:41 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/30 20:44:30 by fchevrey         ###   ########.fr       */
+/*   Created: 2019/04/03 17:27:52 by fchevrey          #+#    #+#             */
+/*   Updated: 2019/04/03 18:07:11 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Victim.hpp"
-#include "Peon.hpp"
+#include "Array.hpp"
+#include <iostream>
+#include <string>
 
 int main(void)
 {
-	Sorcerer	robert("Robert","the Magnificent");
-	Victim		jim("Jimmy");
-	Peon		joe("Joe");
+	Array<int>				arr = Array<int>(10);
+	Array<std::string>		str = Array<std::string>(3);
+	int			k;
 
-	std::cout << robert << jim << joe;
-	robert.polymorph(jim);
-	robert.polymorph(joe);
-	std::cout << " -- derived test -- " << std::endl;
-	Victim		*test = new Peon("Truc");
-	robert.polymorph(*test);
-	delete (test);
-	std::cout << " -- destroy -- " << std::endl;
+	for (unsigned int i = 0; i < arr.size();i++)
+	{
+		arr[i] = i;
+	}
+	for (unsigned int i = 0; i < arr.size();i++)
+	{
+		k = arr[i];
+		std::cout << k << std::endl;
+	}
+	for (unsigned int i = 0; i < str.size();i++)
+	{
+		str[i] = "patatrac";
+		std::cout << str[i] << std::endl;
+	}
+	try
+	{
+		std::string		str2 = str[str.size()];
+		std::cout << str2 << std::endl;
+	}
+	catch (std::exception e)
+	{
+		std::cout << "e :" << "outof range" << std::endl;
+	}
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: fchevrey <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 20:14:08 by fchevrey          #+#    #+#             */
-/*   Updated: 2019/03/29 21:05:59 by fchevrey         ###   ########.fr       */
+/*   Updated: 2019/03/29 21:07:06 by fchevrey         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void fun(ISpaceMarine *bob, ISpaceMarine *jim)
 	AA->push(jim);
 	AA->push(bob);
 	Squad* vlc2 = new Squad(*AA);
-	std::cout << " AH AH AH AH " << std::endl;
+	std::cout << "  == " << std::endl;
 	*AA = *vlc2;
-	std::cout << " AH AH AH AH " << std::endl;
+	std::cout << "  == " << std::endl;
 	delete vlc2;
 	delete AA;
 }
