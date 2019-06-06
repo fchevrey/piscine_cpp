@@ -3,7 +3,6 @@
 #objects
 *.o
 *.swp
-#subjects
-*.pdf
+#other
 .DS_Store
 
