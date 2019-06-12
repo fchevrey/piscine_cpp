@@ -9,7 +9,7 @@ d00 : Basics (Class, namespace, string, struct, pointer)
 
 d01 : Basics2 (new, delete, reference, filestram)
 
-d02 : overload and operator overload
+d02 : overload and operator overload (exercice demand to implement a Fixed Point class)
 
 d03 : inheritance
 
@@ -17,7 +17,7 @@ d04 : Asbtract class, interface, polymorphisme par héritage
 
 Rush 00 : make a sidescroller using  ncurses
 
-d05 : Exception, nested class
+d05 : Exception, nested class (in exercice we also implemnt a factory method)
 
 d06 : casts
 
